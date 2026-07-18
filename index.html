@@ -3,24 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Agents, Workflow Automation & Data Platforms for Growing Businesses | Hivion Labs</title>
-<meta name="description" content="Hivion Labs makes businesses AI-native — custom AI agents, workflow automation, and data platforms. Working prototype in 48 hours, production in 2–6 weeks, fixed quotes, no lock-in. Serving businesses worldwide.">
+<title>Data-First AI Studio — AI Agents, Automation & Data Platforms | Hivion Labs</title>
+<meta name="description" content="Hivion Labs is a data-first AI studio. We fix the data layer your business runs on, then build AI agents, automation, and dashboards on top. Prototype in 48 hours, production in 2–6 weeks, quoted upfront, no lock-in.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <!-- canonical domain: hivion.ai -->
 <link rel="canonical" href="https://hivion.ai/">
-<meta property="og:title" content="AI Agents & Automation, Live in Weeks | Hivion Labs">
-<meta property="og:description" content="Custom AI agents, workflow automation, and data platforms. Prototype in 48 hours, production in 2–6 weeks. Free 30-minute audit.">
+<meta property="og:title" content="Make Your Data Work. Then Make It Think. | Hivion Labs">
+<meta property="og:description" content="Data-first AI studio — we fix your data layer, then build agents, automation, and dashboards on top. Prototype in 48 hours, live in 2–6 weeks. Free 30-minute audit.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hivion.ai/">
-<meta property="og:image" content="https://hivion.ai/assets/night.jpg">
+<meta property="og:image" content="https://hivion.ai/assets/og-image.jpg">
 <meta property="og:site_name" content="Hivion Labs">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI Agents & Automation, Live in Weeks | Hivion Labs">
-<meta name="twitter:description" content="Custom AI agents, workflow automation, and data platforms. Prototype in 48 hours, production in 2–6 weeks.">
-<meta name="twitter:image" content="https://hivion.ai/assets/night.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Make Your Data Work. Then Make It Think. | Hivion Labs">
+<meta name="twitter:description" content="Data-first AI studio — we fix your data layer, then build agents, automation, and dashboards on top. Prototype in 48 hours, live in 2–6 weeks.">
+<meta name="twitter:image" content="https://hivion.ai/assets/og-image.jpg">
 <style>
+  /* self-hosted fonts (Fontsource/OFL) — no external font requests */
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 400; src: url(assets/fonts/inter-latin-ext-400-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 400; src: url(assets/fonts/inter-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 500; src: url(assets/fonts/inter-latin-ext-500-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 500; src: url(assets/fonts/inter-latin-500-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 600; src: url(assets/fonts/inter-latin-ext-600-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 600; src: url(assets/fonts/inter-latin-600-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 400; src: url(assets/fonts/jetbrains-mono-latin-ext-400-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 400; src: url(assets/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 500; src: url(assets/fonts/jetbrains-mono-latin-ext-500-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 500; src: url(assets/fonts/jetbrains-mono-latin-500-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 600; src: url(assets/fonts/jetbrains-mono-latin-ext-600-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 600; src: url(assets/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
   :root{
     --cream:#f8f6ee;
     --ink:#1b2333;
@@ -70,6 +82,7 @@
   .calc-out{background:#f5efdc;border:1px solid #eadfc2;border-radius:10px;padding:14px 16px;margin-bottom:14px}
   .calc-out .big{font-size:26px;font-weight:600;color:var(--green);letter-spacing:-.5px}
   .calc-out .sub{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .calc-out .verdict{margin-top:7px;color:var(--green);font-weight:600}
   .calc-type{font-size:11.5px;color:var(--muted);min-height:34px;line-height:1.6;margin-bottom:14px}
   .calc-type .t{color:var(--ink)}
   .calc-type .cur{display:inline-block;width:7px;height:13px;background:var(--green);vertical-align:-2px;animation:blink 1s steps(1) infinite}
@@ -110,12 +123,44 @@
   .frame img.painting{transform:translateZ(0)}
 
   /* floating UI card */
-  .ui{position:absolute;left:50%;top:50%;transform:translate(-50%,-30%);opacity:0;width:min(560px,86%);background:rgba(15,19,30,.9);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px 24px;color:#dfe3ec;font-family:var(--mono);font-size:12.5px;line-height:2;will-change:transform,opacity}
-  .ui .ui-head{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9aa3b8;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:10px;margin-bottom:12px}
-  .ui .ok{color:#7de3a5}
-  .ui .warn{color:#f5cf7a}
-  .ui .dim{color:#8b93a8}
-  .ui .hl{color:#fff}
+  .ui{position:absolute;left:50%;top:50%;transform:translate(-50%,-30%);opacity:0;width:min(600px,90%);background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border:1px solid var(--hairline);border-radius:14px;padding:18px 22px 16px;color:var(--ink);font-family:var(--mono);font-size:12px;line-height:1.55;box-shadow:0 24px 60px rgba(23,31,26,.25);will-change:transform,opacity}
+  .ui .ui-head{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--hairline);padding-bottom:10px;margin-bottom:12px}
+  .ui-head .tt{flex:1}
+  .ui-head .dots{display:flex;gap:5px}
+  .ui-head .dots i{width:8px;height:8px;border-radius:50%;background:#e3ddc9}
+  .ui-head .dots i:first-child{background:var(--green)}
+  .ui .l,.ghost-ui .l{opacity:0;transform:translateY(7px);transition:opacity .5s ease,transform .5s ease}
+  .ui .l.show,.ghost-ui .l.show{opacity:1;transform:none}
+  /* mini-dashboard primitives */
+  .dr{display:flex;gap:8px;margin:9px 0 2px}
+  .tile{flex:1;background:#faf8ef;border:1px solid var(--hairline);border-radius:9px;padding:8px 10px;min-width:0}
+  .tile .k{font-size:9px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tile .v{font-size:16px;font-weight:600;letter-spacing:-.3px;color:var(--ink);margin-top:2px}
+  .tile .v small{font-size:10px;font-weight:600}
+  .lbl{font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:9px 0 6px}
+  .bars{display:flex;align-items:flex-end;gap:4px;height:34px}
+  .bars i{flex:1;background:var(--green);opacity:.65;border-radius:2px 2px 0 0;transform:scaleY(.04);transform-origin:bottom;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+  .l.show .bars i{transform:scaleY(1)}
+  .hb{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:11px}
+  .hb .hb-l{width:84px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .hb .hb-t{flex:1;height:7px;background:#efeadb;border-radius:4px;overflow:hidden}
+  .hb .hb-t i{display:block;height:100%;width:0;background:var(--green);border-radius:4px;transition:width .8s ease .15s}
+  .l.show .hb .hb-t i{width:var(--w)}
+  .hb .hb-v{width:30px;text-align:right;color:var(--ink);font-weight:600}
+  .prog{height:7px;background:#efeadb;border-radius:4px;overflow:hidden;margin-top:2px}
+  .prog i{display:block;height:100%;width:0;background:var(--green);border-radius:4px;transition:width .9s ease .15s}
+  .l.show .prog i{width:var(--w)}
+  .bub{max-width:88%;width:fit-content;padding:7px 12px;border-radius:12px;font-size:11.5px;line-height:1.5;margin:7px 0 0}
+  .bub.cust{background:#f1eee1;border:1px solid var(--hairline);border-bottom-left-radius:4px}
+  .bub.agent{background:var(--ink);color:var(--cream);border-bottom-right-radius:4px;margin-left:auto}
+  .bub .t{display:block;font-size:9px;color:var(--muted);margin-top:3px;letter-spacing:.04em}
+  .bub.agent .t{color:#9aa3b8}
+  .sl{font-size:11px;color:var(--muted);margin-top:9px}
+  .ui .l:last-child.show::after{content:'';display:inline-block;width:7px;height:12px;background:var(--green);margin-left:7px;vertical-align:-1px;animation:blink 1s steps(1) infinite}
+  .ui .ok{color:#1f8a4c}
+  .ui .warn{color:#a97b12}
+  .ui .dim{color:#9aa0ae}
+  .ui .hl{color:var(--ink);font-weight:600}
 
   /* ---------- statement ---------- */
   .statement{padding:150px 0;text-align:center}
@@ -154,8 +199,9 @@
   .pill-cream:hover{background:#fff;transform:translateY(-1px)}
   .pill-ghost{border:1px solid rgba(255,255,255,.3);color:#eef2ec}
   .pill-ghost:hover{border-color:#fff}
-  .ghost-ui{position:absolute;left:50%;bottom:16vh;transform:translateX(-50%);width:min(620px,88%);background:rgba(19,24,38,.72);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:18px 22px;color:#b6bdcd;font-family:var(--mono);font-size:12px;line-height:2;opacity:.9;z-index:2}
-  .ghost-ui .ok{color:#7de3a5}
+  .ghost-ui{position:absolute;left:50%;bottom:16vh;transform:translateX(-50%);width:min(620px,88%);background:rgba(248,246,238,.94);border:1px solid rgba(27,35,51,.12);border-radius:14px;padding:18px 22px;color:var(--ink);font-family:var(--mono);font-size:12px;line-height:2;z-index:2;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+  .ghost-ui .dim{color:#8a8f9e}
+  .ghost-ui .ok{color:#1f8a4c}
 
   footer{background:var(--night);color:#8b93a8;padding:64px 0 48px;font-size:14px}
   .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
@@ -212,6 +258,9 @@
 
   @media(prefers-reduced-motion:reduce){
     .ui{opacity:1;transform:translate(-50%,-50%)}
+    .ui .l,.ghost-ui .l{opacity:1;transform:none;transition:none}
+    .bars i{transform:scaleY(1) !important;transition:none}
+    .hb .hb-t i,.prog i{width:var(--w) !important;transition:none}
     .tools-track{animation:none}
   }
 </style>
@@ -235,9 +284,9 @@
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="badge">Never stop improving →</span>
-      <h1>AI agents &amp; automation, live in weeks</h1>
-      <p>Hivion Labs helps growing businesses run on AI — custom agents, workflow automation, and data platforms that ship in weeks, keep learning, and quietly hand your team its time back.</p>
+      <span class="badge">Working prototype in 48 hours →</span>
+      <h1>Make your data work. Then make it think.</h1>
+      <p>Hivion Labs is a data-first AI studio. We clean up the data layer your business runs on, then build the agents, automations, and dashboards on top — live in weeks, improving every month.</p>
       <div class="row">
         <a class="pill pill-dark" href="#contact">Book a free audit</a>
         <a class="pill pill-line" href="#seasons">See the work</a>
@@ -245,19 +294,22 @@
       <div class="fine">// 30 minutes, no pitch — you leave with 2–3 concrete automation ideas</div>
     </div>
 
-    <aside class="calc" aria-label="Automation savings estimator">
-      <div class="calc-head"><span>hivion · quick estimate</span><span class="live">● interactive</span></div>
+    <aside class="calc" aria-label="Data reality check">
+      <div class="calc-head"><span>hivion · data reality check</span><span class="live">● interactive</span></div>
+      <label>Places your data lives — tools, sheets, inboxes <b id="c-sys">6</b></label>
+      <input type="range" id="r-sys" min="2" max="15" step="1" value="6">
       <label>People doing manual/repetitive work <b id="c-people">4</b></label>
       <input type="range" id="r-people" min="1" max="25" step="1" value="4">
       <label>Hours each spends on it per week <b id="c-hours">8</b></label>
       <input type="range" id="r-hours" min="2" max="30" step="1" value="8">
       <div class="calc-out">
         <div class="big" id="c-total">1,664 hrs/year</div>
-        <div class="sub">your team's time going to robot work · <span id="c-reclaim">~830 hrs</span> typically automatable</div>
+        <div class="sub">of robot work · fed by <b id="c-sys2">6</b> systems that don't talk to each other · <span id="c-reclaim">~832 hrs</span> automatable</div>
+        <div class="sub verdict" id="c-verdict">→ typical mid-size tangle — data layer fixable in weeks, then automation pays off</div>
       </div>
       <div class="calc-type"><span class="t" id="c-type"></span><span class="cur"></span></div>
       <a class="pill" href="#contact">SEE WHAT YOURS LOOKS LIKE → FREE AUDIT</a>
-      <div class="fine">estimate only — the audit maps your actual workflows</div>
+      <div class="fine">estimate only — the free audit maps your actual workflows &amp; data</div>
     </aside>
   </div>
 </header>
@@ -273,24 +325,65 @@
 <!-- ============ SERVICES INDEX ============ -->
 <section class="index" id="seasons">
   <div class="container">
-    <span class="mono-label">What we build · fixed quotes, no hourly meters</span>
+    <span class="mono-label">What we build · data first, then AI on top · no hourly billing</span>
     <div style="margin-top:20px">
-      <a class="idx-row" href="#svc-1"><span class="n">01</span><span class="t">AI agents &amp; automation</span><span class="d">Support, lead qualification, document processing</span><span class="m">LIVE IN 1–3 WKS</span></a>
-      <a class="idx-row" href="#svc-2"><span class="n">02</span><span class="t">Data platforms &amp; analytics</span><span class="d">Warehouse, pipelines, live dashboards</span><span class="m">LIVE IN 2–6 WKS</span></a>
-      <a class="idx-row" href="#svc-3"><span class="n">03</span><span class="t">AI strategy sprint</span><span class="d">Audit, roadmap, one quick win shipped</span><span class="m">FIXED SCOPE · 1–2 WKS</span></a>
-      <a class="idx-row" href="#svc-4"><span class="n">04</span><span class="t">Workflow automation packs</span><span class="d">CRM, invoicing, reporting, follow-ups</span><span class="m">DELIVERED IN ~2 WKS</span></a>
+      <a class="idx-row" href="#svc-2"><span class="n">01</span><span class="t">Data platforms &amp; analytics</span><span class="d">One source of truth — warehouse, pipelines, live dashboards</span><span class="m">LIVE IN 2–6 WKS</span></a>
+      <a class="idx-row" href="#svc-1"><span class="n">02</span><span class="t">AI agents &amp; automation</span><span class="d">Support, leads, documents, workflows — agents that work because the data does</span><span class="m">LIVE IN 1–3 WKS</span></a>
+      <a class="idx-row" href="#svc-4"><span class="n">03</span><span class="t">AI MVP for founders</span><span class="d">Your product idea, built on our agent factory</span><span class="m">MVP IN 2–6 WKS</span></a>
+      <a class="idx-row" href="#svc-3"><span class="n">04</span><span class="t">AI strategy sprint</span><span class="d">Not sure where to start? Audit, roadmap, one quick win shipped</span><span class="m">FIXED SCOPE · 1–2 WKS</span></a>
     </div>
   </div>
 </section>
 
-<!-- ============ SCENE 1 · SPRING · AGENTS ============ -->
+<!-- ============ SCENE 1 · SUMMER · DATA ============ -->
+<div class="stage" id="svc-2">
+  <div class="sticky"><div class="container">
+    <div class="scene-intro">
+      <span class="mono-label">01 · Data platforms &amp; analytics</span>
+      <h2>Every number, one place</h2>
+      <p>Your sales, inventory, and marketing numbers live in ten spreadsheets and three logins. We build the warehouse and live dashboards that make Monday reporting happen by itself — the layer everything else stands on.</p>
+      <div class="meta">FIRST DASHBOARD IN 2–6 WEEKS · SCOPED &amp; QUOTED AFTER AUDIT</div>
+    </div>
+    <div class="frame">
+    <img class="painting" src="assets/summer.jpg" alt="Summer valley painting" loading="lazy" decoding="async" onerror="this.remove()">
+    <svg viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe9c3"/><stop offset=".6" stop-color="#f6d9a0"/><stop offset="1" stop-color="#eec37e"/></linearGradient>
+        <linearGradient id="m2a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0b06f"/><stop offset="1" stop-color="#c99553"/></linearGradient>
+        <linearGradient id="m2b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a5763d"/><stop offset="1" stop-color="#845c2d"/></linearGradient>
+        <linearGradient id="f2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#caa257"/><stop offset="1" stop-color="#9c7434"/></linearGradient>
+      </defs>
+      <rect width="1440" height="760" fill="url(#sky2)"/>
+      <circle cx="330" cy="170" r="76" fill="#fff3d0"/>
+      <g class="layer" data-depth="12"><path d="M0 350 L240 220 L430 340 L640 230 L860 350 L1100 260 L1440 350 L1440 760 L0 760 Z" fill="url(#m2a)"/></g>
+      <g class="layer" data-depth="26"><path d="M0 470 L300 370 L560 470 L820 380 L1090 480 L1440 410 L1440 760 L0 760 Z" fill="url(#m2b)"/></g>
+      <g class="layer" data-depth="42">
+        <path d="M0 590 C340 520 700 620 1000 570 C1220 535 1340 590 1440 575 L1440 760 L0 760 Z" fill="url(#f2)"/>
+        <g stroke="#7a5522" stroke-width="3" opacity=".55"><line x1="120" y1="640" x2="520" y2="612"/><line x1="160" y1="690" x2="620" y2="660"/><line x1="820" y1="640" x2="1300" y2="615"/></g>
+        <g fill="#6d4d1f"><ellipse cx="720" cy="595" rx="24" ry="30"/><rect x="716" y="608" width="7" height="24"/><ellipse cx="1240" cy="620" rx="28" ry="34"/><rect x="1236" y="636" width="8" height="26"/></g>
+      </g>
+    </svg>
+    <div class="ui" data-ui>
+      <div class="ui-head"><span class="dots"><i></i><i></i><i></i></span><span class="tt">hivion · client ops dashboard</span><span class="ok">● syncing</span></div>
+      <div class="l dr">
+        <div class="tile"><div class="k">Revenue · Jul</div><div class="v">₹41.2L <small class="ok">▲12%</small></div></div>
+        <div class="tile"><div class="k">Ad ROI</div><div class="v">3.4x</div></div>
+        <div class="tile"><div class="k">Stock alerts</div><div class="v"><span class="warn">2</span> <small>SKUs low</small></div></div>
+      </div>
+      <div class="l"><div class="lbl">Daily revenue · last 14 days</div><div class="bars"><i style="height:38%"></i><i style="height:55%"></i><i style="height:42%"></i><i style="height:61%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:52%"></i><i style="height:64%"></i><i style="height:58%"></i><i style="height:76%"></i><i style="height:66%"></i><i style="height:82%"></i><i style="height:74%"></i><i style="height:90%"></i></div></div>
+      <div class="l sl">sources&nbsp;sheets <span class="ok">✓</span> · zoho <span class="ok">✓</span> · shopify <span class="ok">✓</span> · ads <span class="ok">✓</span> &nbsp;·&nbsp; monday report <span class="ok">sent 08:00</span></div>
+    </div>
+  </div></div></div>
+</div>
+
+<!-- ============ SCENE 2 · SPRING · AGENTS ============ -->
 <div class="stage" id="svc-1">
   <div class="sticky"><div class="container">
     <div class="scene-intro">
-      <span class="mono-label">01 · AI agents &amp; automation</span>
+      <span class="mono-label">02 · AI agents &amp; automation</span>
       <h2>Truly tireless teammates</h2>
-      <p>Agents that answer customers, qualify leads, and process documents — at 2 a.m., on Sundays, during festivals. Your team keeps the judgment calls; the agents keep the grind.</p>
-      <div class="meta">LIVE IN 1–3 WEEKS · FIXED QUOTE AFTER AUDIT</div>
+      <p>Agents that answer customers, qualify leads, and process documents — at 2 a.m., on Sundays, during festivals. Built on the data layer we fix first, they answer from facts; your team keeps the judgment calls.</p>
+      <div class="meta">LIVE IN 1–3 WEEKS · SCOPED &amp; QUOTED AFTER AUDIT</div>
     </div>
     <div class="frame">
     <img class="painting" src="assets/spring.jpg" alt="Spring valley painting" loading="lazy" decoding="async" onerror="this.remove()">
@@ -315,58 +408,68 @@
       </g>
     </svg>
     <div class="ui" data-ui>
-      <div class="ui-head"><span>hivion · agent trace</span><span class="ok">● live</span></div>
-      <span class="dim">02:11:07</span> customer → <span class="hl">"ceramic set in stock? need by friday"</span><br>
-      <span class="dim">02:11:09</span> agent checked inventory <span class="ok">✓ 14 units</span> · checked courier SLA <span class="ok">✓ thu delivery</span><br>
-      <span class="dim">02:11:11</span> agent → replied, reserved unit, booked follow-up<br>
-      <span class="dim">02:11:11</span> <span class="ok">resolved without human · 4s</span>
+      <div class="ui-head"><span class="dots"><i></i><i></i><i></i></span><span class="tt">hivion · agent console</span><span class="ok">● live</span></div>
+      <div class="l"><div class="bub cust">ceramic set in stock? need by friday<span class="t">customer · 02:11</span></div></div>
+      <div class="l"><div class="bub agent">Yes — 14 in stock, courier lands Thursday. Reserved one for you.<span class="t">agent · 02:11 · inventory ✓ · courier SLA ✓</span></div></div>
+      <div class="l dr">
+        <div class="tile"><div class="k">Resolved today</div><div class="v">38</div></div>
+        <div class="tile"><div class="k">Avg response</div><div class="v">4s</div></div>
+        <div class="tile"><div class="k">To a human</div><div class="v">2</div></div>
+      </div>
+      <div class="l sl"><span class="ok">● resolved without a human</span> · follow-up booked <span class="ok">✓</span></div>
     </div>
   </div></div></div>
 </div>
 
-<!-- ============ SCENE 2 · SUMMER · DATA ============ -->
-<div class="stage" id="svc-2">
+<!-- ============ SCENE 3 · AUTUMN · MVP ============ -->
+<div class="stage" id="svc-4">
   <div class="sticky"><div class="container">
     <div class="scene-intro">
-      <span class="mono-label">02 · Data platforms &amp; analytics</span>
-      <h2>Every number, one place</h2>
-      <p>Your sales, inventory, and marketing numbers live in ten spreadsheets and three logins. We build the warehouse and live dashboards that make Monday reporting happen by itself.</p>
-      <div class="meta">FIRST DASHBOARD IN 2–6 WEEKS · FIXED QUOTE AFTER AUDIT</div>
+      <span class="mono-label">03 · AI MVP for founders</span>
+      <h2>From idea to working product</h2>
+      <p>Founders with an AI product idea: our agent factory turns it into a working MVP — real agents on a clean data model, deployed from day one. Something you can put in front of users and investors, not a demo that dies after the pitch.</p>
+      <div class="meta">MVP IN 2–6 WEEKS · SCOPED &amp; QUOTED UPFRONT</div>
     </div>
     <div class="frame">
-    <img class="painting" src="assets/summer.jpg" alt="Summer valley painting" loading="lazy" decoding="async" onerror="this.remove()">
+    <img class="painting" src="assets/autumn.jpg" alt="Autumn river valley painting" loading="lazy" decoding="async" onerror="this.remove()">
     <svg viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
-        <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe9c3"/><stop offset=".6" stop-color="#f6d9a0"/><stop offset="1" stop-color="#eec37e"/></linearGradient>
-        <linearGradient id="m2a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0b06f"/><stop offset="1" stop-color="#c99553"/></linearGradient>
-        <linearGradient id="m2b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a5763d"/><stop offset="1" stop-color="#845c2d"/></linearGradient>
-        <linearGradient id="f2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#caa257"/><stop offset="1" stop-color="#9c7434"/></linearGradient>
+        <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6ddc4"/><stop offset=".6" stop-color="#f0c9a4"/><stop offset="1" stop-color="#e6ad83"/></linearGradient>
+        <linearGradient id="m4a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d99e6b"/><stop offset="1" stop-color="#c08350"/></linearGradient>
+        <linearGradient id="m4b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a5613a"/><stop offset="1" stop-color="#84492b"/></linearGradient>
+        <linearGradient id="f4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b4713f"/><stop offset="1" stop-color="#8a4f28"/></linearGradient>
+        <linearGradient id="w4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8c9a4"/><stop offset="1" stop-color="#cfa678"/></linearGradient>
       </defs>
-      <rect width="1440" height="760" fill="url(#sky2)"/>
-      <circle cx="330" cy="170" r="76" fill="#fff3d0"/>
-      <g class="layer" data-depth="12"><path d="M0 350 L240 220 L430 340 L640 230 L860 350 L1100 260 L1440 350 L1440 760 L0 760 Z" fill="url(#m2a)"/></g>
-      <g class="layer" data-depth="26"><path d="M0 470 L300 370 L560 470 L820 380 L1090 480 L1440 410 L1440 760 L0 760 Z" fill="url(#m2b)"/></g>
+      <rect width="1440" height="760" fill="url(#sky4)"/>
+      <circle cx="260" cy="160" r="60" fill="#fdeed2"/>
+      <g class="layer" data-depth="12"><path d="M0 345 L230 215 L440 335 L650 225 L880 350 L1130 265 L1440 345 L1440 760 L0 760 Z" fill="url(#m4a)"/></g>
+      <g class="layer" data-depth="26"><path d="M0 465 L300 370 L560 465 L830 380 L1100 475 L1440 405 L1440 760 L0 760 Z" fill="url(#m4b)"/></g>
       <g class="layer" data-depth="42">
-        <path d="M0 590 C340 520 700 620 1000 570 C1220 535 1340 590 1440 575 L1440 760 L0 760 Z" fill="url(#f2)"/>
-        <g stroke="#7a5522" stroke-width="3" opacity=".55"><line x1="120" y1="640" x2="520" y2="612"/><line x1="160" y1="690" x2="620" y2="660"/><line x1="820" y1="640" x2="1300" y2="615"/></g>
-        <g fill="#6d4d1f"><ellipse cx="720" cy="595" rx="24" ry="30"/><rect x="716" y="608" width="7" height="24"/><ellipse cx="1240" cy="620" rx="28" ry="34"/><rect x="1236" y="636" width="8" height="26"/></g>
+        <path d="M0 585 C330 520 680 615 980 565 C1210 530 1340 585 1440 570 L1440 760 L0 760 Z" fill="url(#f4)"/>
+        <path d="M0 760 L0 690 C240 665 420 705 640 690 C900 672 1160 710 1440 688 L1440 760 Z" fill="url(#w4)" opacity=".85"/>
+        <g fill="#6e3c1e"><ellipse cx="380" cy="590" rx="26" ry="32"/><rect x="376" y="604" width="7" height="24"/><ellipse cx="1060" cy="580" rx="30" ry="36"/><rect x="1056" y="596" width="8" height="26"/></g>
+        <g fill="#e08a4f"><circle cx="430" cy="615" r="3.5"/><circle cx="340" cy="628" r="3"/><circle cx="1010" cy="612" r="3.5"/><circle cx="1120" cy="622" r="3"/></g>
       </g>
     </svg>
     <div class="ui" data-ui>
-      <div class="ui-head"><span>hivion · one source of truth</span><span class="ok">● syncing</span></div>
-      <span class="dim">revenue (jul)</span> <span class="hl">₹41.2L</span> <span class="ok">▲ vs jun</span> · <span class="dim">ad ROI</span> <span class="hl">3.4x</span><br>
-      <span class="dim">stock alerts</span> <span class="warn">2 SKUs low</span> · reorder drafted<br>
-      <span class="dim">sources</span> sheets <span class="ok">✓</span> · zoho <span class="ok">✓</span> · shopify <span class="ok">✓</span> · ads <span class="ok">✓</span><br>
-      <span class="dim">monday report</span> <span class="ok">sent 08:00 — nobody compiled it</span>
+      <div class="ui-head"><span class="dots"><i></i><i></i><i></i></span><span class="tt">hivion · mvp build · week 3 of 5</span><span class="ok">● on track</span></div>
+      <div class="l"><div class="lbl">Build progress</div><div class="prog"><i style="--w:64%"></i></div></div>
+      <div class="l dr">
+        <div class="tile"><div class="k">Pilot users</div><div class="v">6</div></div>
+        <div class="tile"><div class="k">Sessions logged</div><div class="v">14</div></div>
+        <div class="tile"><div class="k">Staging</div><div class="v ok">live</div></div>
+      </div>
+      <div class="l sl"><span class="ok">✓</span> data model + auth &nbsp;·&nbsp; <span class="ok">✓</span> agent core: onboarding + Q&amp;A</div>
+      <div class="l sl">→ next: <span class="hl">investor demo build · friday</span></div>
     </div>
   </div></div></div>
 </div>
 
-<!-- ============ SCENE 3 · WINTER · SPRINT ============ -->
+<!-- ============ SCENE 4 · WINTER · SPRINT ============ -->
 <div class="stage" id="svc-3">
   <div class="sticky"><div class="container">
     <div class="scene-intro">
-      <span class="mono-label">03 · AI strategy sprint</span>
+      <span class="mono-label">04 · AI strategy sprint</span>
       <h2>Clarity in two weeks</h2>
       <p>We audit your workflows and data, rank where AI actually pays off, and ship one quick win before the sprint ends. A roadmap and working software — not a slide deck.</p>
       <div class="meta">FIXED SCOPE, 1–2 WEEKS · QUOTED UPFRONT</div>
@@ -393,51 +496,18 @@
       </g>
     </svg>
     <div class="ui" data-ui>
-      <div class="ui-head"><span>hivion · sprint week 2 of 2</span><span class="ok">● on schedule</span></div>
-      <span class="ok">✓</span> 14 workflows mapped · 3 automation targets ranked<br>
-      <span class="ok">✓</span> data readiness: scattered → migration plan approved<br>
-      <span class="ok">✓</span> quick win live: <span class="hl">follow-up automation, 6 hrs/wk saved</span><br>
-      <span class="dim">→ next: production build · fixed quote attached</span>
-    </div>
-  </div></div></div>
-</div>
-
-<!-- ============ SCENE 4 · AUTUMN · WORKFLOWS ============ -->
-<div class="stage" id="svc-4">
-  <div class="sticky"><div class="container">
-    <div class="scene-intro">
-      <span class="mono-label">04 · Workflow automation packs</span>
-      <h2>The boring work, gone</h2>
-      <p>CRM updates, invoicing, reporting, reminders — the unglamorous workflows that quietly eat 20+ hours of your team's week, automated end to end and documented.</p>
-      <div class="meta">DELIVERED IN ~2 WEEKS · FIXED QUOTE AFTER AUDIT</div>
-    </div>
-    <div class="frame">
-    <img class="painting" src="assets/autumn.jpg" alt="Autumn river valley painting" loading="lazy" decoding="async" onerror="this.remove()">
-    <svg viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6ddc4"/><stop offset=".6" stop-color="#f0c9a4"/><stop offset="1" stop-color="#e6ad83"/></linearGradient>
-        <linearGradient id="m4a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d99e6b"/><stop offset="1" stop-color="#c08350"/></linearGradient>
-        <linearGradient id="m4b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a5613a"/><stop offset="1" stop-color="#84492b"/></linearGradient>
-        <linearGradient id="f4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b4713f"/><stop offset="1" stop-color="#8a4f28"/></linearGradient>
-        <linearGradient id="w4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8c9a4"/><stop offset="1" stop-color="#cfa678"/></linearGradient>
-      </defs>
-      <rect width="1440" height="760" fill="url(#sky4)"/>
-      <circle cx="260" cy="160" r="60" fill="#fdeed2"/>
-      <g class="layer" data-depth="12"><path d="M0 345 L230 215 L440 335 L650 225 L880 350 L1130 265 L1440 345 L1440 760 L0 760 Z" fill="url(#m4a)"/></g>
-      <g class="layer" data-depth="26"><path d="M0 465 L300 370 L560 465 L830 380 L1100 475 L1440 405 L1440 760 L0 760 Z" fill="url(#m4b)"/></g>
-      <g class="layer" data-depth="42">
-        <path d="M0 585 C330 520 680 615 980 565 C1210 530 1340 585 1440 570 L1440 760 L0 760 Z" fill="url(#f4)"/>
-        <path d="M0 760 L0 690 C240 665 420 705 640 690 C900 672 1160 710 1440 688 L1440 760 Z" fill="url(#w4)" opacity=".85"/>
-        <g fill="#6e3c1e"><ellipse cx="380" cy="590" rx="26" ry="32"/><rect x="376" y="604" width="7" height="24"/><ellipse cx="1060" cy="580" rx="30" ry="36"/><rect x="1056" y="596" width="8" height="26"/></g>
-        <g fill="#e08a4f"><circle cx="430" cy="615" r="3.5"/><circle cx="340" cy="628" r="3"/><circle cx="1010" cy="612" r="3.5"/><circle cx="1120" cy="622" r="3"/></g>
-      </g>
-    </svg>
-    <div class="ui" data-ui>
-      <div class="ui-head"><span>hivion · automation run log</span><span class="ok">● 3 packs active</span></div>
-      <span class="dim">09:00</span> weekly report compiled → <span class="ok">sent ✓</span><br>
-      <span class="dim">11:32</span> new order #1148 → invoice → tally entry <span class="ok">✓</span><br>
-      <span class="dim">14:05</span> payment overdue → reminder sent → <span class="ok">marked paid ✓</span><br>
-      <span class="dim">this week</span> <span class="hl">212 tasks · 0 touched by a human</span>
+      <div class="ui-head"><span class="dots"><i></i><i></i><i></i></span><span class="tt">hivion · audit sprint · week 2 of 2</span><span class="ok">● on schedule</span></div>
+      <div class="l"><div class="lbl">Top automation targets · hrs saved / week</div>
+        <div class="hb"><span class="hb-l">follow-ups</span><span class="hb-t"><i style="--w:100%"></i></span><span class="hb-v">6h</span></div>
+        <div class="hb"><span class="hb-l">invoicing</span><span class="hb-t"><i style="--w:66%"></i></span><span class="hb-v">4h</span></div>
+        <div class="hb"><span class="hb-l">reporting</span><span class="hb-t"><i style="--w:50%"></i></span><span class="hb-v">3h</span></div>
+      </div>
+      <div class="l dr">
+        <div class="tile"><div class="k">Workflows mapped</div><div class="v">14</div></div>
+        <div class="tile"><div class="k">Targets ranked</div><div class="v">3</div></div>
+        <div class="tile"><div class="k">Data plan</div><div class="v ok">approved</div></div>
+      </div>
+      <div class="l sl">quick win live: <span class="hl">follow-up automation — 6 hrs/wk saved</span> <span class="ok">✓</span></div>
     </div>
   </div></div></div>
 </div>
@@ -449,25 +519,24 @@
       <span class="mono-label">Selected work</span>
       <h2 style="font-size:clamp(30px,4vw,46px);margin-top:12px">Real workflows, measurably faster</h2>
     </div>
-    <!-- TODO: replace bracketed placeholders with real past projects -->
     <div class="proof-grid">
       <div class="pcase">
-        <div class="ind">E-commerce</div>
-        <h3>Lead-qualification agent on WhatsApp</h3>
-        <p>[Client's] sales team spent hours daily on unqualified enquiries. We built an agent that answers product questions from the catalog, qualifies leads, and books calls automatically.</p>
-        <div class="res">→ [XX]% of enquiries handled without a human</div>
+        <div class="ind">Enterprise data · Founder track record</div>
+        <h3>Data platforms from scratch, twice</h3>
+        <p>Org-wide data platforms built from zero at Georgia-Pacific and Cox Automotive — AWS pipelines, event-driven architecture, and the partitioning work that cuts processing costs at Fortune-500 scale.</p>
+        <div class="res">→ $60,000/month saved at Georgia-Pacific</div>
       </div>
       <div class="pcase">
-        <div class="ind">Operations</div>
-        <h3>Invoice &amp; document pipeline</h3>
-        <p>Manual entry from PDF invoices into accounting was eating [X] days a month. Our pipeline reads invoices, validates against purchase orders, and posts clean entries automatically.</p>
-        <div class="res">→ Processing: [X] days → [X] minutes</div>
+        <div class="ind">E-commerce · Current client</div>
+        <h3>Ordering agent, human in the loop</h3>
+        <p>Customers chat with an agent that helps them pick the right product. The agent confirms the wholesaler's price and drafts the order — a human approves before anything is final. Their marketing runs on the same stack.</p>
+        <div class="res">→ Product selection → wholesaler order, automated</div>
       </div>
       <div class="pcase">
-        <div class="ind">Data &amp; analytics</div>
-        <h3>Unified analytics platform</h3>
-        <p>Sales, inventory, and marketing numbers lived across sheets, ad platforms, and an ERP. We built a warehouse and live dashboards giving [client] one real-time source of truth.</p>
-        <div class="res">→ Monthly reporting → real-time</div>
+        <div class="ind">Finance media</div>
+        <h3>Newsletter on autopilot</h3>
+        <p>A finance-domain client runs a weekly newsletter that's one of their top revenue products. Our pipeline pulls the latest market news, assembles the issue, and sends it on schedule — what was a weekly manual grind now runs itself.</p>
+        <div class="res">→ Latest news in, weekly issue out — automatically</div>
       </div>
     </div>
   </div>
@@ -480,9 +549,9 @@
       <div class="avatar">NJ</div>
       <div>
         <h3>Nikitesh Jain</h3>
-        <div class="role">Founder · Data engineer first</div>
-        <p>I build the systems myself — no account managers, no hand-offs. [X] years across data platforms and automation; Hivion Labs exists because most businesses don't need more AI hype, they need their data fixed and their busywork gone. You'll work directly with me from audit to handover.</p>
-        <a class="link" href="#" target="_blank">LINKEDIN →</a>
+        <div class="role">Founder · Data &amp; AI engineer</div>
+        <p>I build the systems myself — no account managers, no hand-offs. Eight years building enterprise data platforms at Cox Automotive and Georgia-Pacific, from scratch both times; Hivion Labs exists because most businesses don't need more AI hype, they need their data fixed and their busywork gone. You'll work directly with me from audit to handover.</p>
+        <a class="link" href="https://www.linkedin.com/in/nikiteshjain" target="_blank" rel="noopener">LINKEDIN →</a>
       </div>
     </div>
   </div>
@@ -492,18 +561,18 @@
 <section class="statement" id="how">
   <div class="container">
     <div class="line" data-line>Audit.</div>
-    <div class="line" data-line>Prototype.</div>
+    <div class="line" data-line>Fix.</div>
     <div class="line" data-line>Ship.</div>
     <div class="line" data-line>Improve.</div>
-    <p>A free 30-minute audit finds the highest-ROI workflow. A working prototype lands within 48 hours. Production ships in 2–6 weeks at a fixed price. Then we keep making it better — every month, if you want.</p>
+    <p>A free 30-minute audit maps your workflows and the data underneath them. A working prototype lands within 48 hours. Production ships in 2–6 weeks, scoped and quoted upfront — data layer fixed first, AI on top. Then we keep making it better, every month if you want.</p>
   </div>
 </section>
 
 <!-- ============ OWNERSHIP ============ -->
 <div class="own-strip">
   <div class="container own-grid">
-    <div><div class="t">Fixed pricing</div><p>Quoted before we start. No hourly meters, no surprise invoices.</p></div>
-    <div><div class="t">Full handover</div><p>Code, credentials, docs, runbooks — everything transfers at delivery.</p></div>
+    <div><div class="t">No hourly billing</div><p>Every project is scoped and quoted before we start. No meters running, no surprise invoices.</p></div>
+    <div><div class="t">Full handover</div><p>Code, credentials, docs, runbooks — everything transfers at delivery. Need a team to run it? We hire and train them, then hand over.</p></div>
     <div><div class="t">Your stack</div><p>Built on tools you already run. Nothing proprietary, ever.</p></div>
     <div><div class="t">Cancel any month</div><p>Retainers are optional and month-to-month. We earn the renewal.</p></div>
   </div>
@@ -513,33 +582,39 @@
 <section class="faq-sec" id="faq">
   <div class="container">
     <div style="text-align:center">
-      <span class="mono-label">Station: FAQ</span>
+      <span class="mono-label">FAQ · straight answers</span>
       <h2 style="font-size:clamp(30px,4vw,46px);margin-top:12px">Questions, answered</h2>
     </div>
     <div class="faq-wrap">
       <div class="faq-item"><button class="faq-q">What exactly does Hivion Labs do?<span class="chev">+</span></button>
-        <div class="faq-a"><p>We're an AI consultancy and automation studio. We build custom AI agents (support, sales, document processing), automate business workflows end to end, and build the data platforms and dashboards underneath them. One team from "where should we use AI?" to a system running in production.</p></div>
+        <div class="faq-a"><p>We're a data-first AI studio. First we fix the data layer your business runs on — warehouse, pipelines, one source of truth. Then we build on top of it: custom AI agents, end-to-end workflow automation, and live dashboards. For founders, we also build AI product MVPs on the same agent factory. One team from "where should we use AI?" to a system running in production.</p></div>
       </div>
       <div class="faq-item"><button class="faq-q">How are you different from a big consultancy — or a cheap chatbot agency?<span class="chev">+</span></button>
-        <div class="faq-a"><p>Big consultancies sell months of discovery and layers of managers; we ship a working prototype in 48 hours and you work directly with the people building. Chatbot agencies bolt a bot onto messy data and wonder why it hallucinates; we're data engineers first — we fix the data layer, then automate on top of it.</p></div>
+        <div class="faq-a"><p>Big consultancies sell months of discovery and layers of managers; we ship a working prototype in 48 hours and you work directly with the people building. Bad data breaks bots — chatbot agencies learn that after launch. We're data engineers first: we fix the data layer, then automate on top of it.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q">Our data is a mess. Is that a problem?<span class="chev">+</span></button>
+        <div class="faq-a"><p>It's our starting assumption. Most clients arrive with numbers spread across spreadsheets, tools, and inboxes — which is exactly why automation hasn't worked for them yet. Fixing that layer is phase one of every project: consolidate, clean, connect. Then the agents and automations sit on data they can trust. If your data were already perfect, you'd only need half of us.</p></div>
       </div>
       <div class="faq-item"><button class="faq-q">Who do you work with?<span class="chev">+</span></button>
-        <div class="faq-a"><p>Small and mid-size businesses worldwide — e-commerce and D2C, professional services, clinics, real estate, manufacturing, logistics. If your team is drowning in repetitive work or your numbers live in ten spreadsheets, you're our kind of client.</p></div>
+        <div class="faq-a"><p>Small and mid-size businesses worldwide — e-commerce and D2C, professional services, clinics, real estate, manufacturing, logistics. If your team is drowning in repetitive work or your numbers live in ten spreadsheets, you're our kind of client. Plus founders building AI products — see the MVP question below.</p></div>
       </div>
       <div class="faq-item"><button class="faq-q">What does it cost?<span class="chev">+</span></button>
-        <div class="faq-a"><p>Every project gets a fixed quote after the free audit — once we understand your workflows, data, and scope. The price in the proposal is the price you pay: no hourly meters, no surprise invoices. Retainers are monthly, optional, and cancellable any month.</p></div>
+        <div class="faq-a"><p>Every project is scoped and quoted after the free audit — once we understand your workflows, data, and scope. You approve the quote before work starts, and if the scope changes we re-quote openly — no hourly meters, no surprise invoices. Retainers are monthly, optional, and cancellable any month.</p></div>
       </div>
       <div class="faq-item"><button class="faq-q">How fast will I see something working?<span class="chev">+</span></button>
         <div class="faq-a"><p>48 hours from kickoff you'll see a working prototype of the core workflow. Focused automations go live in 1–3 weeks; larger platforms in 2–6 weeks. You get a demo every week.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q">Can you build our startup's MVP?<span class="chev">+</span></button>
+        <div class="faq-a"><p>Yes. Our agent factory — the same agents, pipelines, and data models we run for client automations — turns your product idea into a working MVP in 2–6 weeks, scoped and quoted upfront. We start with the data model so it scales past the demo, and you own all the code from day one. Ideal for founders who need something real in front of users and investors, fast.</p></div>
       </div>
       <div class="faq-item"><button class="faq-q">What happens after launch?<span class="chev">+</span></button>
         <div class="faq-a"><p>Every build ships with documentation and a full handover — you own the code and the data, no lock-in. Most clients choose a monthly retainer for monitoring and new automations, but it's optional and cancellable any month.</p></div>
       </div>
       <div class="faq-item"><button class="faq-q">What's your tech stack?<span class="chev">+</span></button>
-        <div class="faq-a"><p>Claude and OpenAI models (plus open-source LLMs where they fit), Python and TypeScript, n8n for orchestration, Postgres/Supabase, modern BI for dashboards, deployed on AWS or Vercel. We integrate with what you already use — WhatsApp Business, Zoho, Tally, Salesforce, HubSpot, Shopify, custom ERPs.</p></div>
+        <div class="faq-a"><p>Claude and OpenAI models (plus open-source LLMs where they fit), Python and TypeScript, n8n for orchestration, Postgres/Supabase, Databricks for enterprise-scale data platforms, modern BI for dashboards, deployed on AWS or Vercel. We integrate with what you already use — WhatsApp Business, Zoho, Tally, Salesforce, HubSpot, Shopify, custom ERPs.</p></div>
       </div>
       <div class="faq-item"><button class="faq-q">How do we start?<span class="chev">+</span></button>
-        <div class="faq-a"><p>Book a free 30-minute AI audit. We map your workflows, identify the 2–3 highest-ROI automation opportunities, and send you a written summary — useful whether or not you hire us. If we're a fit, a proposal follows within 48 hours and work starts within a week.</p></div>
+        <div class="faq-a"><p>Book a free 30-minute AI audit. We map your workflows and where your data lives, rank the 2–3 highest-ROI automation opportunities, and send you a written summary — including an honest read on whether your data is ready for them. Useful whether or not you hire us. If we're a fit, a proposal follows within 48 hours and work starts within a week.</p></div>
       </div>
     </div>
   </div>
@@ -549,8 +624,8 @@
 <div class="finale" id="contact">
   <div class="finale-copy">
     <span class="mono-label">Get started</span>
-    <h2>Make it AI-native now.</h2>
-    <p>One call triggers mobilization. 30 minutes, no pitch — and an honest read on whether AI is worth it for you yet.</p>
+    <h2>Ready to make it think?</h2>
+    <p>30 minutes, no pitch. You leave with an honest read on your data — and whether AI is worth it for you yet.</p>
     <div class="row">
       <a class="pill pill-cream" href="https://calendly.com/nikitesh-jain-hivion/30min" target="_blank">Book the free audit</a>
       <a class="pill pill-ghost" href="https://wa.me/14047861293?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Hivion%20Labs." target="_blank">WhatsApp us</a>
@@ -574,8 +649,8 @@
     <g stroke="#f2eeda" stroke-width="1.5" opacity=".28"><line x1="1080" y1="520" x2="1220" y2="520"/><line x1="1050" y1="555" x2="1250" y2="555"/><line x1="1100" y1="590" x2="1200" y2="590"/></g>
   </svg>
   <div class="ghost-ui">
-    <span class="dim">hivion · systems overnight</span><br>
-    agents answered 34 enquiries · pipelines synced <span class="ok">✓</span> · monday report queued <span class="ok">✓</span> · <span class="dim">your team slept.</span>
+    <div class="l"><span class="dim">hivion · systems overnight</span></div>
+    <div class="l">agents answered 34 enquiries · pipelines synced <span class="ok">✓</span> · monday report queued <span class="ok">✓</span> · <span class="dim">your team slept.</span></div>
   </div>
 </div>
 
@@ -585,7 +660,7 @@
     <div class="foot-grid">
       <div>
         <a class="logo" href="#"><span class="spark"></span>Hivion Labs</a>
-        <p style="font-size:13px;max-width:240px;color:#5f6880">Never stop improving.</p>
+        <p style="font-size:13px;max-width:240px;color:#5f6880">Fix the data. Automate the work. Keep the time.</p>
       </div>
       <div>
         <div class="col-t">Company</div>
@@ -597,12 +672,12 @@
         <div class="col-t">Resources</div>
         <a href="#contact">Book an audit</a>
         <a href="mailto:hello@hivion.ai">hello@hivion.ai</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of use</a>
       </div>
       <div>
         <div class="col-t">Connect</div>
-        <a href="#" target="_blank">LinkedIn</a>
-        <a href="#" target="_blank">X (Twitter)</a>
-        <a href="#" target="_blank">YouTube</a>
+        <a href="https://www.linkedin.com/in/nikiteshjain" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <div class="foot-base">
@@ -617,19 +692,21 @@
 </a>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Hivion Labs","description":"AI consultancy and automation studio — custom AI agents, workflow automation, and data platforms for small and mid-size businesses.","url":"https://hivion.ai/","email":"hello@hivion.ai","founder":{"@type":"Person","name":"Nikitesh Jain"},"areaServed":["Worldwide"],"knowsAbout":["AI agents","workflow automation","data platforms","business analytics","AI consulting"],"slogan":"Never stop improving"}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Hivion Labs","description":"Data-first AI studio — we fix the data layer, then build custom AI agents, workflow automation, and dashboards for small and mid-size businesses.","url":"https://hivion.ai/","email":"hello@hivion.ai","founder":{"@type":"Person","name":"Nikitesh Jain","sameAs":"https://www.linkedin.com/in/nikiteshjain"},"areaServed":["Worldwide"],"knowsAbout":["AI agents","workflow automation","data platforms","business analytics","AI consulting","AI product MVPs"],"slogan":"Fix the data. Automate the rest."}
 </script>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What exactly does Hivion Labs do?","acceptedAnswer":{"@type":"Answer","text":"Hivion Labs is an AI consultancy and automation studio. We build custom AI agents, automate business workflows end to end, and build the data platforms and dashboards underneath them."}},
+{"@type":"Question","name":"What exactly does Hivion Labs do?","acceptedAnswer":{"@type":"Answer","text":"Hivion Labs is a data-first AI studio. We fix the data layer first — warehouse, pipelines, one source of truth — then build custom AI agents, workflow automation, and live dashboards on top. We also build AI product MVPs for founders."}},
+{"@type":"Question","name":"Our data is a mess. Is that a problem?","acceptedAnswer":{"@type":"Answer","text":"Messy data is the starting assumption, not a blocker. Phase one of every project consolidates, cleans, and connects the data layer; the agents and automations are then built on data they can trust."}},
 {"@type":"Question","name":"How is Hivion Labs different from a big consultancy or a chatbot agency?","acceptedAnswer":{"@type":"Answer","text":"We ship a working prototype in 48 hours and you work directly with the builders. We're data engineers first — we fix the data layer, then automate on top of it."}},
 {"@type":"Question","name":"Who does Hivion Labs work with?","acceptedAnswer":{"@type":"Answer","text":"Small and mid-size businesses worldwide — e-commerce, professional services, clinics, real estate, manufacturing, and logistics."}},
-{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"Every project gets a fixed quote after a free audit, based on workflows, data, and scope. No hourly billing; optional monthly retainers are cancellable any month."}},
+{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"Every project is scoped and quoted upfront after a free audit, based on workflows, data, and scope. No hourly billing; optional monthly retainers are cancellable any month."}},
 {"@type":"Question","name":"How fast will I see something working?","acceptedAnswer":{"@type":"Answer","text":"A working prototype within 48 hours of kickoff. Focused automations go live in 1–3 weeks; larger platforms in 2–6 weeks, with a demo every week."}},
+{"@type":"Question","name":"Can Hivion Labs build our startup's MVP?","acceptedAnswer":{"@type":"Answer","text":"Yes — the agent factory turns product ideas into working MVPs in 2–6 weeks, quoted upfront and built on a clean data model with full code ownership from day one."}},
 {"@type":"Question","name":"What happens after launch?","acceptedAnswer":{"@type":"Answer","text":"Full documentation and handover — you own the code and data, no lock-in. Optional monthly retainers cover monitoring and new automations, cancellable any month."}},
-{"@type":"Question","name":"What is Hivion Labs's tech stack?","acceptedAnswer":{"@type":"Answer","text":"Claude and OpenAI models, Python and TypeScript, n8n, Postgres/Supabase, modern BI tools, deployed on AWS or Vercel — integrated with WhatsApp Business, Zoho, Tally, Salesforce, HubSpot, Shopify, and custom ERPs."}},
-{"@type":"Question","name":"How do we start?","acceptedAnswer":{"@type":"Answer","text":"Book a free 30-minute AI audit. You get a written summary with the 2–3 highest-ROI automation opportunities; if we're a fit, a proposal follows within 48 hours."}}
+{"@type":"Question","name":"What is Hivion Labs's tech stack?","acceptedAnswer":{"@type":"Answer","text":"Claude and OpenAI models, Python and TypeScript, n8n, Postgres/Supabase, Databricks, modern BI tools, deployed on AWS or Vercel — integrated with WhatsApp Business, Zoho, Tally, Salesforce, HubSpot, Shopify, and custom ERPs."}},
+{"@type":"Question","name":"How do we start?","acceptedAnswer":{"@type":"Answer","text":"Book a free 30-minute AI audit. We map your workflows and data, rank the 2–3 highest-ROI automation opportunities, and send a written summary with an honest read on data readiness; if we're a fit, a proposal follows within 48 hours."}}
 ]}
 </script>
 
@@ -671,26 +748,31 @@
   requestAnimationFrame(tick);
 
   // hero calculator
-  const rp=document.getElementById('r-people'), rh=document.getElementById('r-hours');
-  if(rp&&rh){
+  const rp=document.getElementById('r-people'), rh=document.getElementById('r-hours'), rs=document.getElementById('r-sys');
+  if(rp&&rh&&rs){
     const cp=document.getElementById('c-people'), ch=document.getElementById('c-hours'),
-          ct=document.getElementById('c-total'), cr=document.getElementById('c-reclaim');
+          ct=document.getElementById('c-total'), cr=document.getElementById('c-reclaim'),
+          cs=document.getElementById('c-sys'), cs2=document.getElementById('c-sys2'),
+          cv=document.getElementById('c-verdict');
     function calc(){
-      const p=+rp.value, h=+rh.value, yr=p*h*52;
-      cp.textContent=p; ch.textContent=h;
+      const p=+rp.value, h=+rh.value, s=+rs.value, yr=p*h*52;
+      cp.textContent=p; ch.textContent=h; cs.textContent=s; cs2.textContent=s;
       ct.textContent=yr.toLocaleString('en-IN')+' hrs/year';
       cr.textContent='~'+Math.round(yr*0.5).toLocaleString('en-IN')+' hrs';
+      cv.textContent = s>=10 ? '→ heavy fragmentation — fix the data layer first, or the bots will guess'
+                     : s>=5  ? '→ typical mid-size tangle — data layer fixable in weeks, then automation pays off'
+                             : '→ closer than most — clean it up and automation can start within weeks';
     }
-    rp.addEventListener('input',calc); rh.addEventListener('input',calc); calc();
+    rp.addEventListener('input',calc); rh.addEventListener('input',calc); rs.addEventListener('input',calc); calc();
 
     // typing examples
     const examples=[
-      'answering WhatsApp enquiries at 2 a.m.',
-      'copying invoices into the accounting system',
-      'compiling the Monday sales report',
-      'chasing overdue payments, politely',
-      'qualifying leads before they go cold',
-      'updating the CRM after every call'
+      'copying numbers from Zoho into Sheets',
+      'reconciling Shopify orders against Tally',
+      'hunting for last month’s actual revenue',
+      're-typing the same customer into three tools',
+      'compiling the Monday report by hand',
+      'chasing overdue payments, politely'
     ];
     const typeEl=document.getElementById('c-type');
     let ei=0,chI=0,del=false;
@@ -703,6 +785,25 @@
     }
     type();
   }
+
+  // live-window panels: lines tick in on a loop while visible
+  const panels=[...document.querySelectorAll('.ui,.ghost-ui')].map(p=>({p,lines:[...p.querySelectorAll('.l')],t:null,step:0}));
+  const play=st=>{
+    if(st.t)return;
+    const step=()=>{
+      if(st.step<st.lines.length){st.lines[st.step].classList.add('show');st.step++;st.t=setTimeout(step,650)}
+      else{st.t=setTimeout(()=>{st.lines.forEach(l=>l.classList.remove('show'));st.step=0;st.t=setTimeout(step,600)},3200)}
+    };
+    st.t=setTimeout(step,250);
+  };
+  const stopP=st=>{clearTimeout(st.t);st.t=null};
+  if(!reduced){
+    const ioP=new IntersectionObserver(es=>{es.forEach(e=>{
+      const st=panels.find(x=>x.p===e.target); if(!st)return;
+      e.isIntersecting?play(st):stopP(st);
+    })},{threshold:.35});
+    panels.forEach(st=>ioP.observe(st.p));
+  }else{panels.forEach(st=>st.lines.forEach(l=>l.classList.add('show')))}
 
   // statement lines light up as they enter
   const lines=document.querySelectorAll('[data-line]');

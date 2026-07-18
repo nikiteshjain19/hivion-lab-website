@@ -5,6 +5,8 @@
 # To make another file public later, add a line like:  !/newfile.html
 !/.gitignore
 !/index.html
+!/privacy.html
+!/terms.html
 !/CNAME
 !/README.md
 !/assets/
