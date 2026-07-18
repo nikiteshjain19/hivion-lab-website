@@ -123,12 +123,44 @@
   .frame img.painting{transform:translateZ(0)}
 
   /* floating UI card */
-  .ui{position:absolute;left:50%;top:50%;transform:translate(-50%,-30%);opacity:0;width:min(560px,86%);background:rgba(15,19,30,.9);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px 24px;color:#dfe3ec;font-family:var(--mono);font-size:12.5px;line-height:2;will-change:transform,opacity}
-  .ui .ui-head{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9aa3b8;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:10px;margin-bottom:12px}
-  .ui .ok{color:#7de3a5}
-  .ui .warn{color:#f5cf7a}
-  .ui .dim{color:#8b93a8}
-  .ui .hl{color:#fff}
+  .ui{position:absolute;left:50%;top:50%;transform:translate(-50%,-30%);opacity:0;width:min(600px,90%);background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border:1px solid var(--hairline);border-radius:14px;padding:18px 22px 16px;color:var(--ink);font-family:var(--mono);font-size:12px;line-height:1.55;box-shadow:0 24px 60px rgba(23,31,26,.25);will-change:transform,opacity}
+  .ui .ui-head{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--hairline);padding-bottom:10px;margin-bottom:12px}
+  .ui-head .tt{flex:1}
+  .ui-head .dots{display:flex;gap:5px}
+  .ui-head .dots i{width:8px;height:8px;border-radius:50%;background:#e3ddc9}
+  .ui-head .dots i:first-child{background:var(--green)}
+  .ui .l,.ghost-ui .l{opacity:0;transform:translateY(7px);transition:opacity .5s ease,transform .5s ease}
+  .ui .l.show,.ghost-ui .l.show{opacity:1;transform:none}
+  /* mini-dashboard primitives */
+  .dr{display:flex;gap:8px;margin:9px 0 2px}
+  .tile{flex:1;background:#faf8ef;border:1px solid var(--hairline);border-radius:9px;padding:8px 10px;min-width:0}
+  .tile .k{font-size:9px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tile .v{font-size:16px;font-weight:600;letter-spacing:-.3px;color:var(--ink);margin-top:2px}
+  .tile .v small{font-size:10px;font-weight:600}
+  .lbl{font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:9px 0 6px}
+  .bars{display:flex;align-items:flex-end;gap:4px;height:34px}
+  .bars i{flex:1;background:var(--green);opacity:.65;border-radius:2px 2px 0 0;transform:scaleY(.04);transform-origin:bottom;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+  .l.show .bars i{transform:scaleY(1)}
+  .hb{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:11px}
+  .hb .hb-l{width:84px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .hb .hb-t{flex:1;height:7px;background:#efeadb;border-radius:4px;overflow:hidden}
+  .hb .hb-t i{display:block;height:100%;width:0;background:var(--green);border-radius:4px;transition:width .8s ease .15s}
+  .l.show .hb .hb-t i{width:var(--w)}
+  .hb .hb-v{width:30px;text-align:right;color:var(--ink);font-weight:600}
+  .prog{height:7px;background:#efeadb;border-radius:4px;overflow:hidden;margin-top:2px}
+  .prog i{display:block;height:100%;width:0;background:var(--green);border-radius:4px;transition:width .9s ease .15s}
+  .l.show .prog i{width:var(--w)}
+  .bub{max-width:88%;width:fit-content;padding:7px 12px;border-radius:12px;font-size:11.5px;line-height:1.5;margin:7px 0 0}
+  .bub.cust{background:#f1eee1;border:1px solid var(--hairline);border-bottom-left-radius:4px}
+  .bub.agent{background:var(--ink);color:var(--cream);border-bottom-right-radius:4px;margin-left:auto}
+  .bub .t{display:block;font-size:9px;color:var(--muted);margin-top:3px;letter-spacing:.04em}
+  .bub.agent .t{color:#9aa3b8}
+  .sl{font-size:11px;color:var(--muted);margin-top:9px}
+  .ui .l:last-child.show::after{content:'';display:inline-block;width:7px;height:12px;background:var(--green);margin-left:7px;vertical-align:-1px;animation:blink 1s steps(1) infinite}
+  .ui .ok{color:#1f8a4c}
+  .ui .warn{color:#a97b12}
+  .ui .dim{color:#9aa0ae}
+  .ui .hl{color:var(--ink);font-weight:600}
 
   /* ---------- statement ---------- */
   .statement{padding:150px 0;text-align:center}
@@ -167,8 +199,9 @@
   .pill-cream:hover{background:#fff;transform:translateY(-1px)}
   .pill-ghost{border:1px solid rgba(255,255,255,.3);color:#eef2ec}
   .pill-ghost:hover{border-color:#fff}
-  .ghost-ui{position:absolute;left:50%;bottom:16vh;transform:translateX(-50%);width:min(620px,88%);background:rgba(19,24,38,.72);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:18px 22px;color:#b6bdcd;font-family:var(--mono);font-size:12px;line-height:2;opacity:.9;z-index:2}
-  .ghost-ui .ok{color:#7de3a5}
+  .ghost-ui{position:absolute;left:50%;bottom:16vh;transform:translateX(-50%);width:min(620px,88%);background:rgba(248,246,238,.94);border:1px solid rgba(27,35,51,.12);border-radius:14px;padding:18px 22px;color:var(--ink);font-family:var(--mono);font-size:12px;line-height:2;z-index:2;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+  .ghost-ui .dim{color:#8a8f9e}
+  .ghost-ui .ok{color:#1f8a4c}
 
   footer{background:var(--night);color:#8b93a8;padding:64px 0 48px;font-size:14px}
   .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
@@ -225,6 +258,9 @@
 
   @media(prefers-reduced-motion:reduce){
     .ui{opacity:1;transform:translate(-50%,-50%)}
+    .ui .l,.ghost-ui .l{opacity:1;transform:none;transition:none}
+    .bars i{transform:scaleY(1) !important;transition:none}
+    .hb .hb-t i,.prog i{width:var(--w) !important;transition:none}
     .tools-track{animation:none}
   }
 </style>
@@ -328,11 +364,14 @@
       </g>
     </svg>
     <div class="ui" data-ui>
-      <div class="ui-head"><span>hivion · one source of truth</span><span class="ok">● syncing</span></div>
-      <span class="dim">revenue (jul)</span> <span class="hl">₹41.2L</span> <span class="ok">▲ vs jun</span> · <span class="dim">ad ROI</span> <span class="hl">3.4x</span><br>
-      <span class="dim">stock alerts</span> <span class="warn">2 SKUs low</span> · reorder drafted<br>
-      <span class="dim">sources</span> sheets <span class="ok">✓</span> · zoho <span class="ok">✓</span> · shopify <span class="ok">✓</span> · ads <span class="ok">✓</span><br>
-      <span class="dim">monday report</span> <span class="ok">sent 08:00 — nobody compiled it</span>
+      <div class="ui-head"><span class="dots"><i></i><i></i><i></i></span><span class="tt">hivion · client ops dashboard</span><span class="ok">● syncing</span></div>
+      <div class="l dr">
+        <div class="tile"><div class="k">Revenue · Jul</div><div class="v">₹41.2L <small class="ok">▲12%</small></div></div>
+        <div class="tile"><div class="k">Ad ROI</div><div class="v">3.4x</div></div>
+        <div class="tile"><div class="k">Stock alerts</div><div class="v"><span class="warn">2</span> <small>SKUs low</small></div></div>
+      </div>
+      <div class="l"><div class="lbl">Daily revenue · last 14 days</div><div class="bars"><i style="height:38%"></i><i style="height:55%"></i><i style="height:42%"></i><i style="height:61%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:52%"></i><i style="height:64%"></i><i style="height:58%"></i><i style="height:76%"></i><i style="height:66%"></i><i style="height:82%"></i><i style="height:74%"></i><i style="height:90%"></i></div></div>
+      <div class="l sl">sources&nbsp;sheets <span class="ok">✓</span> · zoho <span class="ok">✓</span> · shopify <span class="ok">✓</span> · ads <span class="ok">✓</span> &nbsp;·&nbsp; monday report <span class="ok">sent 08:00</span></div>
     </div>
   </div></div></div>
 </div>
@@ -369,11 +408,15 @@
       </g>
     </svg>
     <div class="ui" data-ui>
-      <div class="ui-head"><span>hivion · agent trace</span><span class="ok">● live</span></div>
-      <span class="dim">02:11:07</span> customer → <span class="hl">"ceramic set in stock? need by friday"</span><br>
-      <span class="dim">02:11:09</span> agent checked inventory <span class="ok">✓ 14 units</span> · checked courier SLA <span class="ok">✓ thu delivery</span><br>
-      <span class="dim">02:11:11</span> agent → replied, reserved unit, booked follow-up<br>
-      <span class="dim">02:11:11</span> <span class="ok">resolved without human · 4s</span>
+      <div class="ui-head"><span class="dots"><i></i><i></i><i></i></span><span class="tt">hivion · agent console</span><span class="ok">● live</span></div>
+      <div class="l"><div class="bub cust">ceramic set in stock? need by friday<span class="t">customer · 02:11</span></div></div>
+      <div class="l"><div class="bub agent">Yes — 14 in stock, courier lands Thursday. Reserved one for you.<span class="t">agent · 02:11 · inventory ✓ · courier SLA ✓</span></div></div>
+      <div class="l dr">
+        <div class="tile"><div class="k">Resolved today</div><div class="v">38</div></div>
+        <div class="tile"><div class="k">Avg response</div><div class="v">4s</div></div>
+        <div class="tile"><div class="k">To a human</div><div class="v">2</div></div>
+      </div>
+      <div class="l sl"><span class="ok">● resolved without a human</span> · follow-up booked <span class="ok">✓</span></div>
     </div>
   </div></div></div>
 </div>
@@ -409,11 +452,15 @@
       </g>
     </svg>
     <div class="ui" data-ui>
-      <div class="ui-head"><span>hivion · mvp build · week 3</span><span class="ok">● on track</span></div>
-      <span class="ok">✓</span> data model + auth deployed · staging live<br>
-      <span class="ok">✓</span> agent core shipped: onboarding + Q&amp;A flows<br>
-      <span class="dim">16:40</span> first pilot-user session recorded <span class="ok">✓</span><br>
-      <span class="dim">→ next</span> <span class="hl">investor demo build · friday</span>
+      <div class="ui-head"><span class="dots"><i></i><i></i><i></i></span><span class="tt">hivion · mvp build · week 3 of 5</span><span class="ok">● on track</span></div>
+      <div class="l"><div class="lbl">Build progress</div><div class="prog"><i style="--w:64%"></i></div></div>
+      <div class="l dr">
+        <div class="tile"><div class="k">Pilot users</div><div class="v">6</div></div>
+        <div class="tile"><div class="k">Sessions logged</div><div class="v">14</div></div>
+        <div class="tile"><div class="k">Staging</div><div class="v ok">live</div></div>
+      </div>
+      <div class="l sl"><span class="ok">✓</span> data model + auth &nbsp;·&nbsp; <span class="ok">✓</span> agent core: onboarding + Q&amp;A</div>
+      <div class="l sl">→ next: <span class="hl">investor demo build · friday</span></div>
     </div>
   </div></div></div>
 </div>
@@ -449,11 +496,18 @@
       </g>
     </svg>
     <div class="ui" data-ui>
-      <div class="ui-head"><span>hivion · sprint week 2 of 2</span><span class="ok">● on schedule</span></div>
-      <span class="ok">✓</span> 14 workflows mapped · 3 automation targets ranked<br>
-      <span class="ok">✓</span> data readiness: scattered → migration plan approved<br>
-      <span class="ok">✓</span> quick win live: <span class="hl">follow-up automation, 6 hrs/wk saved</span><br>
-      <span class="dim">→ next: production build · quote attached</span>
+      <div class="ui-head"><span class="dots"><i></i><i></i><i></i></span><span class="tt">hivion · audit sprint · week 2 of 2</span><span class="ok">● on schedule</span></div>
+      <div class="l"><div class="lbl">Top automation targets · hrs saved / week</div>
+        <div class="hb"><span class="hb-l">follow-ups</span><span class="hb-t"><i style="--w:100%"></i></span><span class="hb-v">6h</span></div>
+        <div class="hb"><span class="hb-l">invoicing</span><span class="hb-t"><i style="--w:66%"></i></span><span class="hb-v">4h</span></div>
+        <div class="hb"><span class="hb-l">reporting</span><span class="hb-t"><i style="--w:50%"></i></span><span class="hb-v">3h</span></div>
+      </div>
+      <div class="l dr">
+        <div class="tile"><div class="k">Workflows mapped</div><div class="v">14</div></div>
+        <div class="tile"><div class="k">Targets ranked</div><div class="v">3</div></div>
+        <div class="tile"><div class="k">Data plan</div><div class="v ok">approved</div></div>
+      </div>
+      <div class="l sl">quick win live: <span class="hl">follow-up automation — 6 hrs/wk saved</span> <span class="ok">✓</span></div>
     </div>
   </div></div></div>
 </div>
@@ -595,8 +649,8 @@
     <g stroke="#f2eeda" stroke-width="1.5" opacity=".28"><line x1="1080" y1="520" x2="1220" y2="520"/><line x1="1050" y1="555" x2="1250" y2="555"/><line x1="1100" y1="590" x2="1200" y2="590"/></g>
   </svg>
   <div class="ghost-ui">
-    <span class="dim">hivion · systems overnight</span><br>
-    agents answered 34 enquiries · pipelines synced <span class="ok">✓</span> · monday report queued <span class="ok">✓</span> · <span class="dim">your team slept.</span>
+    <div class="l"><span class="dim">hivion · systems overnight</span></div>
+    <div class="l">agents answered 34 enquiries · pipelines synced <span class="ok">✓</span> · monday report queued <span class="ok">✓</span> · <span class="dim">your team slept.</span></div>
   </div>
 </div>
 
@@ -731,6 +785,25 @@
     }
     type();
   }
+
+  // live-window panels: lines tick in on a loop while visible
+  const panels=[...document.querySelectorAll('.ui,.ghost-ui')].map(p=>({p,lines:[...p.querySelectorAll('.l')],t:null,step:0}));
+  const play=st=>{
+    if(st.t)return;
+    const step=()=>{
+      if(st.step<st.lines.length){st.lines[st.step].classList.add('show');st.step++;st.t=setTimeout(step,650)}
+      else{st.t=setTimeout(()=>{st.lines.forEach(l=>l.classList.remove('show'));st.step=0;st.t=setTimeout(step,600)},3200)}
+    };
+    st.t=setTimeout(step,250);
+  };
+  const stopP=st=>{clearTimeout(st.t);st.t=null};
+  if(!reduced){
+    const ioP=new IntersectionObserver(es=>{es.forEach(e=>{
+      const st=panels.find(x=>x.p===e.target); if(!st)return;
+      e.isIntersecting?play(st):stopP(st);
+    })},{threshold:.35});
+    panels.forEach(st=>ioP.observe(st.p));
+  }else{panels.forEach(st=>st.lines.forEach(l=>l.classList.add('show')))}
 
   // statement lines light up as they enter
   const lines=document.querySelectorAll('[data-line]');
