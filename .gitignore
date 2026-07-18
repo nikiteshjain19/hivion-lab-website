@@ -1,0 +1,10 @@
+# Allowlist model: ignore EVERYTHING by default...
+/*
+
+# ...then re-include ONLY the files GitHub Pages needs to serve the site.
+# To make another file public later, add a line like:  !/newfile.html
+!/.gitignore
+!/index.html
+!/CNAME
+!/README.md
+!/assets/
