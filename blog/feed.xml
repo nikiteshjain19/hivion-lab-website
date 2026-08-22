@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hivion Labs — Writing</title>
+    <link>https://hivion.ai/blog/</link>
+    <description>Field notes on data platforms, pipelines, and AI agents - written from systems we actually built.</description>
+    <language>en</language>
+    <atom:link href="https://hivion.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <!-- Add newest first. One item per post:
+    <item>
+      <title>Post title</title>
+      <link>https://hivion.ai/blog/post-slug/</link>
+      <guid isPermaLink="true">https://hivion.ai/blog/post-slug/</guid>
+      <pubDate>Sat, 12 Sep 2026 09:00:00 +0000</pubDate>
+      <description>One or two sentence excerpt.</description>
+    </item>
+    -->
+  </channel>
+</rss>

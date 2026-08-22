@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Writing | Hivion Labs</title>
+<meta name="description" content="Field notes on data platforms, pipelines, and AI agents — written from systems we actually built and the things that broke in them.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hivion.ai/blog/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Writing | Hivion Labs">
+<meta property="og:description" content="Field notes on data platforms, pipelines, and AI agents — written from systems we actually built.">
+<meta property="og:url" content="https://hivion.ai/blog/">
+<meta property="og:image" content="https://hivion.ai/assets/night.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hivion.ai/assets/night.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Hivion Labs — Writing" href="https://hivion.ai/blog/feed.xml">
+<style>
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 400; src: url(/assets/fonts/inter-latin-ext-400-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 400; src: url(/assets/fonts/inter-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 500; src: url(/assets/fonts/inter-latin-ext-500-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 500; src: url(/assets/fonts/inter-latin-500-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 600; src: url(/assets/fonts/inter-latin-ext-600-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 600; src: url(/assets/fonts/inter-latin-600-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 400; src: url(/assets/fonts/jetbrains-mono-latin-ext-400-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 400; src: url(/assets/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 500; src: url(/assets/fonts/jetbrains-mono-latin-ext-500-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 500; src: url(/assets/fonts/jetbrains-mono-latin-500-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 600; src: url(/assets/fonts/jetbrains-mono-latin-ext-600-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-display: swap; font-weight: 600; src: url(/assets/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  :root{--cream:#f8f6ee;--ink:#1b2333;--muted:#6f7382;--green:#8a6a1a;--hairline:#e6e2d3;--night:#0c1120;--sans:'Inter','Helvetica Neue',Arial,sans-serif;--mono:'JetBrains Mono',Consolas,monospace}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  img{max-width:100%;height:auto}
+  .container{max-width:760px;margin:0 auto;padding:0 26px}
+  nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(247,246,238,.85);backdrop-filter:blur(14px)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1150px;margin:0 auto;padding:0 26px}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:600;font-size:19px;letter-spacing:-.3px;text-decoration:none}
+  .logo .spark{width:20px;height:20px;background:var(--green);border-radius:50% 0 50% 50%}
+  .back{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:3px}
+  main{padding:140px 0 90px}
+  .mono-label{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+  h1{font-weight:500;letter-spacing:-1px;line-height:1.1;font-size:clamp(32px,4.5vw,46px);margin:12px 0 6px}
+  .pill{display:inline-block;font-family:var(--mono);font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:13px 26px;border-radius:999px;text-decoration:none;transition:.2s}
+  .pill-dark{background:var(--ink);color:var(--cream)}
+  .pill-dark:hover{background:var(--green);transform:translateY(-1px)}
+  footer{background:var(--night);color:#8b93a8;padding:34px 0;font-size:13px}
+  footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:11.5px}
+  footer a{color:#8b93a8;text-decoration:none}
+  footer a:hover{color:#eef2ec}
+  .lede{font-size:17px;color:#3d4354;max-width:600px;margin:18px 0 0}
+  .list{margin-top:54px;border-top:1px solid var(--hairline)}
+  .row{display:grid;grid-template-columns:104px 150px 1fr 76px;gap:22px;align-items:baseline;
+       padding:26px 0;border-bottom:1px solid var(--hairline);text-decoration:none;transition:.18s}
+  .row:hover{background:rgba(138,106,26,.045)}
+  .row .d,.row .g,.row .r{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .row .r{text-align:right}
+  .row .t{font-size:19px;font-weight:500;letter-spacing:-.3px;line-height:1.35}
+  .row .t span{display:block;font-size:14.5px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:5px;line-height:1.55}
+  .row:hover .t{color:var(--green)}
+  .empty{border-top:1px solid var(--hairline);margin-top:54px;padding:34px 0 0}
+  .empty h2{font-weight:500;font-size:21px;letter-spacing:-.4px;margin-bottom:12px}
+  .empty p{font-size:15.5px;color:#3d4354;max-width:600px;margin-bottom:14px}
+  .empty .cta{margin-top:30px}
+  .soon{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em;margin-top:34px;
+        border-left:2px solid var(--hairline);padding-left:16px;line-height:2}
+  @media (max-width:680px){
+    .row{grid-template-columns:1fr;gap:7px;padding:22px 0}
+    .row .r{text-align:left}
+  }
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a class="logo" href="/"><span class="spark"></span>Hivion Labs</a><a class="back" href="/">&larr; Back to site</a></div></nav>
+<main><div class="container">
+
+  <span class="mono-label">Hivion Labs · writing</span>
+  <h1>Writing</h1>
+  <p class="lede">Notes from building data platforms and AI systems — what broke, what it cost, and what we'd do differently. No predictions, no listicles.</p>
+
+  <!-- ============================================================
+       POST LIST
+       Add newest first. Copy one .row block per post:
+
+       <a class="row" href="/blog/your-post-slug/">
+         <span class="d">12 Sep 2026</span>
+         <span class="g">Data platforms</span>
+         <span class="t">Post title here<span>One or two lines of excerpt.</span></span>
+         <span class="r">7 min</span>
+       </a>
+
+       Tags: Data platforms · AI agents · AI MVP · AI strategy
+       Then: add the post to feed.xml and sitemap.xml.
+       Delete the .empty block below once the first post is live.
+       ============================================================ -->
+  <div class="list" hidden></div>
+
+  <div class="empty">
+    <h2>First pieces are in draft.</h2>
+    <p>We're writing about the things we've actually built: a partitioning decision that quietly cost $60,000 a month, an event-driven platform we'd rebuild on a scheduler, and what human approval gates really do for an AI agent.</p>
+    <p>Nothing here yet. If you'd rather talk than wait, the audit is free and useful either way.</p>
+    <div class="cta"><a class="pill pill-dark" href="https://calendly.com/nikitesh-jain-hivion/30min" target="_blank" rel="noopener">Book a free audit</a></div>
+  </div>
+
+</div></main>
+<footer><div class="container">
+  <span>© 2026 Hivion Labs · all rights reserved</span>
+  <span><a href="/blog/">Writing</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span>
+</div></footer>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"Hivion Labs — Writing","url":"https://hivion.ai/blog/","description":"Field notes on data platforms, pipelines, and AI agents.","publisher":{"@type":"Organization","name":"Hivion Labs","url":"https://hivion.ai/"}}
+</script>
+</body>
+</html>
