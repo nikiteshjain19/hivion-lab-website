@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hand-maintained. Add a <url> block per new page; keep <loc> byte-identical
+     to that page's rel=canonical. Never list blog/_template.html (noindex). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://hivion.ai/</loc>
+    <lastmod>2026-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://hivion.ai/blog/</loc>
+    <lastmod>2026-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://hivion.ai/blog/the-partition-key-that-cost-60000-a-month/</loc>
+    <lastmod>2026-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://hivion.ai/privacy.html</loc>
+    <lastmod>2026-07-18</lastmod>
+  </url>
+  <url>
+    <loc>https://hivion.ai/terms.html</loc>
+    <lastmod>2026-07-18</lastmod>
+  </url>
+</urlset>

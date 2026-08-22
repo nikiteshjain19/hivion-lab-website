@@ -1,0 +1,8 @@
+# https://hivion.ai/
+User-agent: *
+Allow: /
+
+# Post template — carries noindex too, but no reason to spend crawl budget on it.
+Disallow: /blog/_template.html
+
+Sitemap: https://hivion.ai/sitemap.xml
