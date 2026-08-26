@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hivion Labs — Writing</title>
+    <link>https://hivion.ai/blog/</link>
+    <description>Field notes on data platforms, pipelines, and AI agents - written from systems we actually built.</description>
+    <language>en</language>
+    <atom:link href="https://hivion.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The partition key that cost $60,000 a month</title>
+      <link>https://hivion.ai/blog/the-partition-key-that-cost-60000-a-month/</link>
+      <guid isPermaLink="true">https://hivion.ai/blog/the-partition-key-that-cost-60000-a-month/</guid>
+      <pubDate>Sat, 22 Aug 2026 09:00:00 +0000</pubDate>
+      <description>A pipeline that never failed, never alerted, and quietly got more expensive for a year. What a historical load did to a Delta merge, and how we found it.</description>
+    </item>
+    <!-- Add newest first. One item per post:
+    <item>
+      <title>Post title</title>
+      <link>https://hivion.ai/blog/post-slug/</link>
+      <guid isPermaLink="true">https://hivion.ai/blog/post-slug/</guid>
+      <pubDate>Sat, 12 Sep 2026 09:00:00 +0000</pubDate>
+      <description>One or two sentence excerpt.</description>
+    </item>
+    -->
+  </channel>
+</rss>

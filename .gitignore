@@ -13,3 +13,7 @@
 !/favicon-32.png
 !/apple-touch-icon.png
 !/assets/
+!/blog/
+!/robots.txt
+!/sitemap.xml
+!/.nojekyll
