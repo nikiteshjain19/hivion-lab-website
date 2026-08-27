@@ -5,4 +5,7 @@ Allow: /
 # Post template — carries noindex too, but no reason to spend crawl budget on it.
 Disallow: /blog/_template.html
 
+# Repo README. Pages serves it at /README.md; it is for contributors, not readers.
+Disallow: /README.md
+
 Sitemap: https://hivion.ai/sitemap.xml
